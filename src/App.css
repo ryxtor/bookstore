@@ -1,38 +1,68 @@
-.App {
-  text-align: center;
+body {
+  font-family: sans-serif;
+  background-color: #fafafa;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  background-color: #fff;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  box-shadow: 1px 0.5px 1px #000;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin: 0;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar {
+  margin-left: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  height: 10.625rem;
+}
+
+.book-info {
+  margin-left: 1.688rem;
+}
+
+.book-genre {
+  color: #121212;
+  font-size: 0.875rem;
+  opacity: 50%;
+}
+
+.book-title {
+  color: #121212;
+  font-size: 1.375rem;
+}
+
+.book-author {
+  color: #4386bf;
+  font-size: 0.875rem;
+}
+
+.remove-btn {
+  margin-left: 2rem;
+}
+
+h2 {
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
+}
+
+form {
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
 }
