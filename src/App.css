@@ -1,0 +1,68 @@
+body {
+  font-family: sans-serif;
+  background-color: #fafafa;
+}
+
+header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 0.5px 1px #000;
+}
+
+h1 {
+  margin: 0;
+  padding: 1rem;
+}
+
+.navbar {
+  margin-left: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+
+.book-container {
+  display: grid;
+  grid-template-columns: 40% 30% 30%;
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  height: 10.625rem;
+}
+
+.book-info {
+  margin-left: 1.688rem;
+}
+
+.book-genre {
+  color: #121212;
+  font-size: 0.875rem;
+  opacity: 50%;
+}
+
+.book-title {
+  color: #121212;
+  font-size: 1.375rem;
+}
+
+.book-author {
+  color: #4386bf;
+  font-size: 0.875rem;
+}
+
+.remove-btn {
+  margin-left: 2rem;
+}
+
+h2 {
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
+}
+
+form {
+  margin: 2.375rem 7.14% 0.938rem 7.14%;
+}
