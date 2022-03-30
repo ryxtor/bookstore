@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getBooks, listBooks } from '../redux/books/Books';
+import { getBooks } from '../redux/books/Books';
 import Book from './Book';
 import Form from './Form';
 
@@ -9,8 +9,7 @@ const BookList = () => {
   const dispatch = useDispatch();
 
   useEffect(async () => {
-    const APIbooks = await getBooks();
-    dispatch(listBooks(APIbooks));
+    dispatch(getBooks());
   }, [dispatch]);
 
   return (

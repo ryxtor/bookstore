@@ -33,14 +33,14 @@ export const listBooks = (payload) => ({
   payload,
 });
 
-export const getBooks = async () => {
+export const getBooks = () => async (dispatch) => {
   const response = await fetch(POST_BOOK);
   const APIbooks = await response.json();
   const books = Object.getOwnPropertyNames(APIbooks).map((id) => ({
     item_id: id,
     ...APIbooks[id][0],
   }));
-  return (books);
+  dispatch(listBooks(books));
 };
 
 export const postBook = (payload) => async (dispatch) => {
