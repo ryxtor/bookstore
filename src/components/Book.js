@@ -1,25 +1,25 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/Books';
+import { deleteBook } from '../redux/books/Books';
 
 const Book = ({
   title,
   author,
-  genre,
+  category,
   id,
 }) => {
   const dispatch = useDispatch();
 
   const remove = (e) => {
     e.preventDefault();
-    dispatch(removeBook(id));
+    dispatch(deleteBook(id));
   };
 
   return (
     <div className="book-container" id={id}>
       <div>
         <div className="book-info">
-          <p className="book-genre">{genre}</p>
+          <p className="book-category">{category}</p>
           <h3 className="book-title">{title}</h3>
           <p className="book-author">{author}</p>
         </div>
@@ -40,7 +40,7 @@ const Book = ({
 
 Book.propTypes = {
   author: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
 };
