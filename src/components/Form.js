@@ -1,9 +1,9 @@
 import { useDispatch } from 'react-redux';
 import { v4 } from 'uuid';
 import { useState } from 'react';
-import { addBook } from '../redux/books/Books';
+import { postBook } from '../redux/books/Books';
 
-const genres = [
+const categories = [
   'Action',
   'Adventure',
   'Drama',
@@ -16,7 +16,7 @@ const Form = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [genre, setGenre] = useState('');
+  const [category, setCategory] = useState('');
   // Generate a random ID with uuid package
   const id = v4();
 
@@ -25,10 +25,10 @@ const Form = () => {
     const newBook = {
       title,
       author,
-      genre,
-      id,
+      category,
+      item_id: id,
     };
-    dispatch(addBook(newBook));
+    dispatch(postBook(newBook));
     setTitle('');
     setAuthor('');
   };
@@ -38,9 +38,9 @@ const Form = () => {
       <form onSubmit={submitBook}>
         <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="Book Title" required />
         <input type="text" onChange={(e) => setAuthor(e.target.value)} value={author} placeholder="Author" required />
-        <select name="Category" onChange={(e) => setGenre(e.target.value)} required>
+        <select name="Category" onChange={(e) => setCategory(e.target.value)} required>
           <option value="">Category</option>
-          {genres.map((genre) => (<option key={genre}>{genre}</option>))}
+          {categories.map((genre) => (<option key={genre}>{genre}</option>))}
         </select>
         <input type="submit" />
       </form>
