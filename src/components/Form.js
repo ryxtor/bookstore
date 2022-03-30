@@ -36,10 +36,10 @@ const Form = () => {
     <div>
       <h2>Add New Book</h2>
       <form onSubmit={submitBook}>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="Book Title" />
-        <input type="text" onChange={(e) => setAuthor(e.target.value)} value={author} placeholder="Author" />
-        <select defaultValue="default" onChange={(e) => setGenre(e.target.value)}>
-          <option value="default" disabled>Category</option>
+        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="Book Title" required />
+        <input type="text" onChange={(e) => setAuthor(e.target.value)} value={author} placeholder="Author" required />
+        <select name="Category" onChange={(e) => setGenre(e.target.value)} required>
+          <option value="">Category</option>
           {genres.map((genre) => (<option key={genre}>{genre}</option>))}
         </select>
         <input type="submit" />
