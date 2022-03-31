@@ -10,6 +10,7 @@ header {
   display: flex;
   align-items: center;
   box-shadow: 1px 0.5px 1px #000;
+  margin-bottom: 2.375rem;
 }
 
 h1 {
@@ -31,7 +32,7 @@ h1 {
 .book-container {
   display: grid;
   grid-template-columns: 40% 30% 30%;
-  margin: 2.375rem 7.14% 0.938rem 7.14%;
+  margin: 0 7.14% 0.938rem 7.14%;
   background-color: #fff;
   border: 1px solid #e8e8e8;
   height: 6.625rem;
@@ -91,7 +92,7 @@ h1 {
 }
 
 .progress-bar {
-  margin: 1rem 1.313rem 0 6.5rem;
+  margin: 1rem 1.313rem 0 0;
 }
 
 .porcentage {
@@ -138,10 +139,48 @@ h1 {
   margin-left: 3.688rem;
 }
 
+.form-container {
+  border-top: 1px solid #e8e8e8;
+  margin: 0 7.14%;
+}
+
 h2 {
-  margin: 2.375rem 7.14% 0.938rem 7.14%;
+  font-family: 'Montserrat', serif;
+  font-weight: bold;
+  color: #888;
+  margin: 1.813rem 0 1.188rem 0;
 }
 
 form {
-  margin: 2.375rem 7.14% 0.938rem 7.14%;
+  margin: 2.375rem 0 0.938rem 0;
+  display: flex;
+}
+
+.input {
+  height: 2.813rem;
+  width: 23%;
+  border: 1px solid #e8e8e8;
+  border-radius: 4px;
+  color: #c4c4c4;
+  padding-left: 1rem;
+  font-family: 'Montserrat', serif;
+  margin-right: 2rem;
+}
+
+.input::placeholder {
+  color: #c4c4c4;
+  font-family: 'Montserrat', serif;
+}
+
+.submit-btn {
+  height: 2.813rem;
+  width: 20%;
+  font-family: 'Roboto Slab', sans-serif;
+  font-weight: bold;
+  font-size: 0.813rem;
+  background-color: #0290ff;
+  border: none;
+  color: #fff;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
 }

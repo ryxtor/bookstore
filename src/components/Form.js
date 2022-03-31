@@ -33,16 +33,16 @@ const Form = () => {
     setAuthor('');
   };
   return (
-    <div>
-      <h2>Add New Book</h2>
+    <div className="form-container">
+      <h2>ADD NEW BOOK</h2>
       <form onSubmit={submitBook}>
-        <input type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="Book Title" required />
-        <input type="text" onChange={(e) => setAuthor(e.target.value)} value={author} placeholder="Author" required />
-        <select name="Category" onChange={(e) => setCategory(e.target.value)} required>
+        <input className="input" type="text" onChange={(e) => setTitle(e.target.value)} value={title} placeholder="Book Title" required />
+        <input className="input" type="text" onChange={(e) => setAuthor(e.target.value)} value={author} placeholder="Author" required />
+        <select className="input" name="Category" onChange={(e) => setCategory(e.target.value)} required>
           <option value="">Category</option>
           {categories.map((genre) => (<option key={genre}>{genre}</option>))}
         </select>
-        <input type="submit" />
+        <input className="submit-btn" type="submit" value="ADD BOOK" />
       </form>
     </div>
   );
