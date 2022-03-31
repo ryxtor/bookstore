@@ -27,7 +27,9 @@ const Book = ({
           <h3 className="book-title">{title}</h3>
           <p className="book-author">{author}</p>
         </div>
+        <button type="button" className="comment-btn">Comments</button>
         <button type="button" onClick={remove} className="remove-btn">Remove</button>
+        <button type="button" className="edit-btn">Edit</button>
       </div>
       <div className="progress-container">
         <CircularProgressbar value={percentage} className="progress-bar" />

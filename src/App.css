@@ -82,20 +82,44 @@ h1 {
 }
 
 .remove-btn {
-  width: 3.375rem;
   height: 1.188rem;
-  margin: 1.33rem 0.938rem 0 0;
+  margin: 1.33rem 0 0 0;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
   color: #4386bf;
   border: none;
   background-color: #fff;
   cursor: pointer;
+  padding: 0 0.938rem 0 1.063rem;
+}
+
+.comment-btn {
+  height: 1.188rem;
+  margin: 1.33rem 0 0 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  border-right: 1px solid #e8e8e8;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0 0.938rem 0 0;
+}
+
+.edit-btn {
+  height: 1.188rem;
+  margin: 1.33rem 0 0 0;
+  font-family: 'Roboto Slab', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+  border: none;
+  border-left: 1px solid #e8e8e8;
+  background-color: #fff;
+  cursor: pointer;
+  padding: 0 0.938rem 0 1.063rem;
 }
 
 .progress-container {
