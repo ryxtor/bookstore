@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
 import { deleteBook } from '../redux/books/Books';
+
+const percentage = 64;
 
 const Book = ({
   title,
@@ -25,14 +29,17 @@ const Book = ({
         </div>
         <button type="button" onClick={remove} className="remove-btn">Remove</button>
       </div>
-      <div>
-        <p>64%</p>
-        <p>Completed</p>
+      <div className="progress-container">
+        <CircularProgressbar value={percentage} className="progress-bar" />
+        <div>
+          <p className="porcentage">64%</p>
+          <p className="completed">Completed</p>
+        </div>
       </div>
-      <div>
-        <p>Current Chapter</p>
-        <p>Chapter 17</p>
-        <button type="button">Update progress</button>
+      <div className="chapter-container">
+        <p className="current-chapter">Current Chapter</p>
+        <p className="chapter">Chapter 17</p>
+        <button type="button" className="update-btn">UPDATE PROGRESS</button>
       </div>
     </div>
   );
